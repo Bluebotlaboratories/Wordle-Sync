@@ -4,7 +4,7 @@ Synchronises your Wordle save data between your PC and mobile device
 
 ## How to install/open
 ### Mobile:
-For iOS devices, download the shortcut available [here](https://icloud.com)
+For iOS devices, download the shortcut available [here](https://www.icloud.com/shortcuts/dbddf1a6916646cfae953e48efc3c672)
 You may need to enable running shortcut scripts, see [this article](https://support.apple.com/en-gb/guide/shortcuts/apdfeb05586f/5.0/ios/15.0#:~:text=Allow%20scripts%20to%20run%20from%20a%20shortcut)
 
 Once you have installed the shortcut, open wordle **in Safari** and open the `sharesheet` (the thing you use for sending websites to people) and scroll down until you see the `Wordle-Sync` shortcut you installed earlier, run it and allow any required permissions.
@@ -29,6 +29,6 @@ If you need any help, just press the `help` button
 You need to refresh the page for changes to apply after loading.
 
 # TODO
-- [ ] Add iOS Shortcut
+- [x] Add iOS Shortcut (preliminary)
 - [x] Add main interface
 - [ ] Add cloud saves if there is enough demand for it
