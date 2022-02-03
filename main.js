@@ -1,3 +1,5 @@
+// Copyright Bluebotlaboratories 2022 under CC BY-SA-NC 4.0
+
 var html = document.getElementsByTagName("html")[0];
 
 html.innerHTML = `
