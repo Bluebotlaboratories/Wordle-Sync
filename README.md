@@ -1,5 +1,5 @@
 # Wordle-Sync
-Synchronises your Wordle save data between your PC and mobile device
+Allows you to transfer your Wordle save data accross different devices
 
 
 ## How to install/open
