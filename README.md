@@ -29,6 +29,6 @@ If you need any help, just press the `help` button
 You need to refresh the page for changes to apply after loading.
 
 # TODO
-[ ] Add iOS Shortcut
-[x] Add main interface
-[ ] Add cloud saves if there is enough demand for it
+- [ ] Add iOS Shortcut
+- [x] Add main interface
+- [ ] Add cloud saves if there is enough demand for it
