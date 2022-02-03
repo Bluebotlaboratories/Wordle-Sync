@@ -2,7 +2,7 @@
 Synchronises your Wordle save data between your PC and mobile device
 
 
-## How to use
+## How to install/open
 ### Mobile:
 For iOS devices, download the shortcut available [here](https://icloud.com)
 You may need to enable running shortcut scripts, see [this article](https://support.apple.com/en-gb/guide/shortcuts/apdfeb05586f/5.0/ios/15.0#:~:text=Allow%20scripts%20to%20run%20from%20a%20shortcut)
@@ -19,8 +19,11 @@ Once it is done, you may close the `sharesheet` and you will have access to the 
 4. Once you press enter, the Wordle page should change into the Wordle-Sync app
 
 
-### After usage:
+## How to use after installing/opening:
 You may obtain save data by clicking the button and then copying the data in the save-data box
 To load data, you may paste the data into the save-data box and then clicking the coresponding button
+
+If you need any help, just press the `help` button
+
 
 You need to refresh the page for changes to apply after loading.
