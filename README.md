@@ -14,14 +14,13 @@ Once you have installed the shortcut, open wordle **in Safari** and open the `sh
 Once it is done, you may close the `sharesheet` and you will have access to the Wordle-Sync interface
 
 
-### PC (Vanilla):
-Coming Soon
-
-
-### PC (Userscript/Tampermonkey):
+### PC:
 1. Copy contents of the `main.js` file in this repository and go to Wordle
 2. Open the developer tools Console on the Wordle page (`Shift + Ctrl + J` or `Shift + ⌘ + J` on most browsers)
 3. Once you press enter, the Wordle page should change into the Wordle-Sync app, at this point you can close the developer tools Console
+
+### PC (Userscript/Tampermonkey):
+Coming Soon
 
 
 ## How to use after installing/opening:
