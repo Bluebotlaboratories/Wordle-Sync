@@ -4,6 +4,8 @@ Allows you to transfer your Wordle save data accross different devices
 
 ## How to install/open
 ### Mobile:
+Android devices are not currently supported unfortunately, sorry about that.
+
 For iOS devices, download the shortcut available [here](https://www.icloud.com/shortcuts/dbddf1a6916646cfae953e48efc3c672)
 You may need to enable running shortcut scripts, see [this article](https://support.apple.com/en-gb/guide/shortcuts/apdfeb05586f/5.0/ios/15.0#:~:text=Allow%20scripts%20to%20run%20from%20a%20shortcut)
 
@@ -14,9 +16,8 @@ Once it is done, you may close the `sharesheet` and you will have access to the 
 
 ### PC:
 1. Copy contents of the `main.js` file in this repository and go to Wordle
-2. Open the developer tools on the Wordle page (`ctrl+shift+I` on most browsers)
-3. Go to the `Console` tab (which should already be there) and paste the code you copied earlier
-4. Once you press enter, the Wordle page should change into the Wordle-Sync app
+2. Open the developer tools Console on the Wordle page (`Shift + Ctrl + J` or `Shift + ⌘ + J` on most browsers)
+3. Once you press enter, the Wordle page should change into the Wordle-Sync app, at this point you can close the developer tools Console
 
 
 ## How to use after installing/opening:
@@ -32,3 +33,4 @@ You need to refresh the page for changes to apply after loading.
 - [x] Add iOS Shortcut (preliminary)
 - [x] Add main interface
 - [ ] Add cloud saves if there is enough demand for it
+- [ ] Create a tampermonkey userscript?
