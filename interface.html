@@ -77,8 +77,14 @@
     <button class="button" onclick="load();">Load Save Data</button>
     <br >
     <br >
+    
+    Conversion Tools:
+    <button class="button" onclick="wordleToNYT();">Wordle -> NYT</button>
+    <button class="button" onclick="NYTToWordle();">NYT -> Wordle</button>
+    
     <br >
-
+    <br >
+    <br >
     Save Data:
     <br >
     <textarea id="saveData"></textarea>
@@ -132,6 +138,18 @@
             document.getElementById("saveData").value = JSON.stringify(window.localStorage);
             setStatus("Data Saved!");
             setTimeout(() => {setStatus("Ready.", "green")}, 750);
+        }
+        
+        function wordleToNYT() {
+            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("gameState", "nyt-wordle-state");
+            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("darkTheme", "nyt-wordle-darkmode");
+            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("statistics", "nyt-wordle-statistics");
+        }
+        
+        function NYTToWordle() {
+            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("nyt-wordle-state", "gameState");
+            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("nyt-wordle-darkmode", "darkTheme");
+            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("nyt-wordle-statistics", "statistics");
         }
 
         function load() {
