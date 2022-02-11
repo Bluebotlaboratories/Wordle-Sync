@@ -96,7 +96,8 @@ var script = document.createElement("script");
 var scriptContent = document.createTextNode(`
 // Enable dark mode if data is set:
 var darkMode = window.localStorage.getItem("darkTheme");
-if (darkMode == true || darkMode == "true") {
+var nytDarkMode = window.localStorage.getItem("nyt-wordle-darkmode");
+if (darkMode == true || darkMode == "true" || nytDarkMode == true || nytDarkMode == "true") {
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("nightMode");
 }
