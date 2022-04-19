@@ -36,4 +36,4 @@ You need to refresh the page for changes to apply after loading.
 - [x] Add iOS Shortcut (preliminary)
 - [x] Add main interface
 - [ ] Add cloud saves if there is enough demand for it
-- [ ] Create a tampermonkey userscript?
+- [ ] Create a tampermonkey userscript
