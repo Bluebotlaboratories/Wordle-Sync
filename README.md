@@ -2,7 +2,7 @@
 Allows you to transfer your Wordle save data accross different devices
 
 
-## How to install/open
+## How to use
 ### Mobile:
 Android devices are not currently supported unfortunately, sorry about that.
 
