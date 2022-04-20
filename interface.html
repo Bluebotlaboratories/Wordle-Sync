@@ -6,6 +6,9 @@
             --notificationColor: #c6c9cc;
             --fieldColour: #d7dadc;
             --textColor: #000;
+            --invertedNotificationColor: #272729;
+            --invertedFieldColour: #3a3a3c;
+            --invertedTextColor: #d7dadc;
         }
         * {
             font-family: sans-serif;
@@ -27,6 +30,10 @@
             font-weight: bold;
             border-radius: 5px;
         }
+        .inverted {
+            background-color: var(--invertedFieldColour);
+            color: var(--invertedTextColor);
+        }
         #saveData {
             height: 100px;
             width: 200px;
@@ -39,6 +46,10 @@
             --notificationColor: #272729;
             --fieldColour: #3a3a3c;
             --textColor: #d7dadc;
+
+            --invertedNotificationColor: #c6c9cc;
+            --invertedFieldColour: #d7dadc;
+            --invertedTextColor: #000;
         }
         #help {
             position: fixed;
@@ -52,23 +63,30 @@
             padding: 20px;
         }
     </style>
+
+    <script src="interface.js"></script>
 </head>
 <body>
     <div style="border-color: green;" id="notification">Ready.</div>
     <br >
-    <button onclick="toggleHelp();">Help</button>
+    <button onclick="toggleHelp();">Instructons & Help</button>
 
     <div hidden id="help">
         <h1>Wordle Sync</h1>
         <p>This application allows you to save/load Wordle save files</p>
-        <p>Click on "Get Save Data" to get your save data</p>
+        <p>Click on "Get Save Data" to get your save data from Wordle</p>
         <p>The save data will appear in the save data field and then you can copy it with the copy contents button</p>
-        <br >
-        <p>If you want to load save data, simply paste it into the save data field and click on "Load Save Data", then reload and your data should be loaded!</p>
-        <br >
-        <br >
-        <p>You can click help again to close this</p>
-        <p>Don't forget to reload the page to return to WORDLE!</p>
+        <br />
+        <p>If you want to load save data into Wordle, simply paste it into the save data field and click on "Load Save Data", then reload and your save data should be loaded!</p>
+        <br />
+        <br />
+        <p>Additional functions are also available with the buttons below</p>
+        <br />
+        <br />
+        <p>You can click the Instructions & Help button again or the close button to close this popup</p>
+        <p>Don't forget to reload the page to return to WORDLE</p>
+        <br />
+        <button class="inverted" onclick="toggleHelp();">Close Help</button>
     </div>
 
     <br >
@@ -92,99 +110,4 @@
     <br >
     <button class="button" onclick="clipboardCopy();">Copy Contents</button>
     <button class="button" onclick="clipboardRead();">Paste Contents</button>
-
-    <script>
-        function loadData(data) {
-            keys = Object.keys(data);
-            for (var i = 0; i < keys.length; i++) {
-                window.localStorage.setItem(keys[i], data[keys[i]])
-            }
-        }
-
-        // Enable dark mode if data is set:
-        var darkMode = window.localStorage.getItem("darkTheme");
-        if (darkMode == true || darkMode == "true") {
-            var body = document.getElementsByTagName("body")[0];
-            body.classList.add("nightMode");
-        }
-
-        function setStatus(status, colour = "green") {
-            document.getElementById("notification").innerText = status;
-            document.getElementById("notification").style = "border-color: " + colour;
-        }
-
-        function toggleHelp() {
-            document.getElementById("help").hidden = !document.getElementById("help").hidden;
-
-            if (document.getElementById("help").hidden) {
-                setStatus("Ready.", "green");
-
-                var buttons = document.getElementsByClassName("button");
-
-                for (var i = 0; i < buttons.length; i++) {
-                    buttons[i].disabled = false;
-                }
-            } else {
-                setStatus("Help Open", "orange");
-                var buttons = document.getElementsByClassName("button");
-
-                for (var i = 0; i < buttons.length; i++) {
-                    buttons[i].disabled = true;
-                }
-            }
-        }
-
-        function save() {
-            document.getElementById("saveData").value = JSON.stringify(window.localStorage);
-            setStatus("Data Saved!");
-            setTimeout(() => {setStatus("Ready.", "green")}, 750);
-        }
-        
-        function wordleToNYT() {
-            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("gameState", "nyt-wordle-state");
-            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("darkTheme", "nyt-wordle-darkmode");
-            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("statistics", "nyt-wordle-statistics");
-        }
-        
-        function NYTToWordle() {
-            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("nyt-wordle-state", "gameState");
-            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("nyt-wordle-darkmode", "darkTheme");
-            document.getElementById("saveData").value = document.getElementById("saveData").value.replace("nyt-wordle-statistics", "statistics");
-        }
-
-        function load() {
-            var dataJSON = JSON.parse(document.getElementById("saveData").value);
-            loadData(dataJSON);
-            setStatus("Data Loaded!");
-            setTimeout(() => {setStatus("Ready.", "green")}, 750);
-        }
-
-        function clipboardRead() {
-            navigator.clipboard.readText().then(
-                function (clipText) {
-                    document.getElementById("saveData").value = clipText;
-
-                    setStatus("Clipboard Pasted!");
-                    setTimeout(() => {setStatus("Ready.", "green")}, 750);
-                },
-                function () {
-                    setStatus("Clipboard Paste Error!", "red");
-                    setTimeout(() => {setStatus("Ready.", "green")}, 750);
-                }
-            );
-        }
-
-        function clipboardCopy() {
-            navigator.clipboard.writeText(document.getElementById("saveData").value).then(
-                function () {
-                    setStatus("Clipboard Copied!");
-                    setTimeout(() => {setStatus("Ready.", "green")}, 750);
-                },
-                function () {
-                    setStatus("Clipboard Copy Error!", "red");
-                    setTimeout(() => {setStatus("Ready.", "green")}, 750);
-                }
-            );
-        }
-    </script>
 <body>
