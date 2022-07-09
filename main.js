@@ -126,7 +126,7 @@ function loadData(data) {
 
 // Enable dark mode if data is set:
 const darkMode = window.localStorage.getItem("darkTheme");
-const nytDarkMode = window.localStorage.getItem("nyt-wordle-darkmode");
+const nytDarkMode = JSON.parse(window.localStorage.getItem("nyt-wordle-moogle/ANON")).settings.darkMode;
 if (darkMode == true || nytDarkMode == "true") {
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("nightMode");
