@@ -1,3 +1,5 @@
+// Licensed CC BY-NC-SA 4.0 by Bluebotlaboratories
+
 function loadData(data) {
     keys = Object.keys(data);
     for (var i = 0; i < keys.length; i++) {
