@@ -25,7 +25,7 @@ var script = document.createElement("script"); var src = document.createAttribut
 3. Once you press enter, the Wordle page should change into the Wordle-Sync page, at this point you can close the developer tools Console if you want
 
 ### PC (Userscript/Tampermonkey):
-Coming Soon
+~~Coming Soon~~
 
 
 ## How to use after installing/opening:
