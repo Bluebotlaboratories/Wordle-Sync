@@ -15,15 +15,14 @@ Once it is done, you may close the `sharesheet` and you will have access to the 
 
 
 ### PC:
-1. Copy contents of the `main.js` file in this repository and go to Wordle
-2. Open the developer tools Console on the Wordle page (`Shift + Ctrl + J` or `Shift + ⌘ + J` on most browsers)
-3. Enter the following line of code: 
+1. Open the developer tools Console on the Wordle page (`Shift + Ctrl + J` or `Shift + ⌘ + J` on most browsers)
+2. Enter the following line of code: 
 
 ```javascript
 var script = document.createElement("script"); var src = document.createAttribute("src"); src.value = "https://cdn.jsdelivr.net/gh/Bluebotlaboratories/Wordle-Sync@main/main.js"; script.setAttributeNode(src); document.body.append(script);
 ```
 
-5. Once you press enter, the Wordle page should change into the Wordle-Sync page, at this point you can close the developer tools Console if you want
+3. Once you press enter, the Wordle page should change into the Wordle-Sync page, at this point you can close the developer tools Console if you want
 
 ### PC (Userscript/Tampermonkey):
 Coming Soon
