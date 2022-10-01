@@ -1,9 +1,9 @@
-// Licensed CC BY-SA-NC 4.0 by Bluebotlaboratories
+// Licensed CC BY-NC-SA 4.0 by Bluebotlaboratories
 
 var html = document.getElementsByTagName("html")[0];
 
 html.innerHTML = `
-<!-- Licensed CC BY-SA-NC 4.0 by Bluebotlaboratories -->
+<!-- Licensed CC BY-NC-SA 4.0 by Bluebotlaboratories -->
 <head>
     <style>
         body {
