@@ -1,9 +1,9 @@
+## NOTE
+This is a discontinued project, and may not work on the latest version of NYC-Wordle, use at your own risk
+
 # Wordle-Sync
 Allows you to transfer your Wordle save data accross different devices
 Also allows you to copy data from NYC-Wordle to original Wordle and vice-versa
-
-## NOTE
-This is a discontinued project, and may not work on the latest version of NYC-Wordle, use at your own risk
 
 ## How to use
 ### Mobile:
